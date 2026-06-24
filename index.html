@@ -1,1 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taste of France — Menu & details</title>
+<style>
+  :root{
+    --primary:#a94f27;
+    --primary-deep:#8c3f1d;
+    --ink:#2a211c;
+    --body:#5a4f47;
+    --muted:#8c8178;
+    --line:#e3d6bf;
+    --card:#ffffff;
+    --display:"Vortigra","Cormorant Garamond",Georgia,serif;
+    --sans:"Raleway",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  .lf-acc{
+    font-family:var(--sans);
+    color:var(--body);
+    max-width:850px;
+    margin:0 auto;
+    padding:8px 20px 24px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .lf-item{border-top:1px solid var(--line);}
+  .lf-item:last-child{border-bottom:1px solid var(--line);}
+  .lf-btn{
+    width:100%;
+    appearance:none;
+    background:none;
+    border:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:14px 4px;
+    text-align:left;
+    font-family:inherit;
+  }
+  .lf-q{
+    font-family:var(--display);
+    font-size:24px;
+    font-weight:600;
+    color:var(--ink);
+    line-height:1.1;
+  }
+  .lf-plus{
+    margin-left:auto;
+    font-family:var(--display);
+    font-size:28px;
+    line-height:1;
+    color:var(--primary);
+    transition:transform .25s ease;
+    flex:none;
+  }
+  .lf-item.open .lf-plus{transform:rotate(45deg);}
+  .lf-panel{
+    overflow:hidden;
+    max-height:0;
+    transition:max-height .3s ease;
+  }
+  .lf-panel-inner{padding:0 4px 24px;max-width:760px;}
+  .lf-panel p{font-size:15px;line-height:1.65;color:var(--body);margin:0 0 12px;}
+  .lf-panel p:last-child{margin-bottom:0;}
+  .lf-sub{
+    font-family:var(--sans);
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--primary-deep);
+    margin:16px 0 8px;
+  }
+  .lf-list{margin:0 0 12px;padding:0;list-style:none;}
+  .lf-list li{
+    display:flex;
+    gap:10px;
+    font-size:15px;
+    line-height:1.4;
+    color:var(--body);
+    margin-bottom:4px;
+  }
+  .lf-list li:last-child{margin-bottom:0;}
+  .lf-list .lf-dash{color:var(--primary);flex:none;}
+  .lf-bold{font-weight:700;color:#7D756A;}
+  @media (max-width:520px){
+    .lf-q{font-size:21px;}
+    .lf-acc{padding:8px 14px 20px;}
+  }
+</style>
+</head>
+<body>
+<div class="lf-acc" id="lf-acc">
 
+  <div class="lf-item open">
+    <button class="lf-btn" aria-expanded="true">
+      <span class="lf-q">Menu</span>
+      <span class="lf-plus">+</span>
+    </button>
+    <div class="lf-panel">
+      <div class="lf-panel-inner">
+        <p>In 4 different locations:</p>
+        <ul class="lf-list">
+          <li><span class="lf-dash">—</span><span><span class="lf-bold">A two-course meal</span>: one savory and one sweet soufflé</span></li>
+          <li><span class="lf-dash">—</span><span><span class="lf-bold">A generous apetizer</span>: cheese &amp; charcuterie board + a glass of natural wine</span></li>
+          <li><span class="lf-dash">—</span><span><span class="lf-bold">A sweet treat</span>: a slice of flan pâtissier</span></li>
+          <li><span class="lf-dash">—</span><span><span class="lf-bold">And another sweet treat</span>: madeleines</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="lf-item">
+    <button class="lf-btn" aria-expanded="false">
+      <span class="lf-q">How it works</span>
+      <span class="lf-plus">+</span>
+    </button>
+    <div class="lf-panel">
+      <div class="lf-panel-inner">
+        <p>Once your booking is confirmed, you'll receive an <span class="lf-bold">email listing all 4 addresses on your food tour.</span> This email also allows you to <span class="lf-bold">collect your Tour Kit</span>, which includes your <span class="lf-bold">tasting vouchers</span> and your <span class="lf-bold">local insider guide</span>.</p>
+        <p>You can visit each venue whenever you like, as long as it's during their opening hours.</p>
+        <p>At your first stop (in any order you choose!), simply show your email to pick up your Tour Kit, then use your vouchers along the way.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="lf-item">
+    <button class="lf-btn" aria-expanded="false">
+      <span class="lf-q">Diets</span>
+      <span class="lf-plus">+</span>
+    </button>
+    <div class="lf-panel">
+      <div class="lf-panel-inner">
+        <p>This experience is designed around the original creations of our artisans and unfortunately <span class="lf-bold">cannot accommodate</span> gluten-free, lactose-free, vegetarian, vegan diets, or nut allergies. To ensure a seamless experience for everyone, we recommend selecting another experience if you follow one of these diets.</p>
+        <p>Some dishes or products may contain pork. The charcuterie board can be made with beef instead, and the savory soufflé can also be adapted if needed.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="lf-item">
+    <button class="lf-btn" aria-expanded="false">
+      <span class="lf-q">Validity &amp; availability</span>
+      <span class="lf-plus">+</span>
+    </button>
+    <div class="lf-panel">
+      <div class="lf-panel-inner">
+        <div class="lf-sub">Validity</div>
+        <p>You can complete your self-guided food tour across multiple days, and even multiple trips!</p>
+        <p>Vouchers can be used until <span class="lf-bold">December 31, 2026</span>. Possible extension to January 2027, if you are traveling during the New Year period.</p>
+        <div class="lf-sub">Availability</div>
+        <p>Our featured artisans welcome you throughout the year, except in August when many take their annual summer break.</p>
+        <p>On rare festive dates (such as Valentine's Day or New Year's Eve), a venue may be unavailable if it offers a special set menu that day.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="lf-item">
+    <button class="lf-btn" aria-expanded="false">
+      <span class="lf-q">Weekends</span>
+      <span class="lf-plus">+</span>
+    </button>
+    <div class="lf-panel">
+      <div class="lf-panel-inner">
+        <p>If you're visiting Paris for the weekend, please note that not all products/dishes may be available, as two stops are closed on Sundays, something quite common in France. That said, the experience can be spread over two days depending on what's open.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var acc = document.getElementById('lf-acc');
+  var items = acc.querySelectorAll('.lf-item');
+
+  function setPanel(item, open){
+    var panel = item.querySelector('.lf-panel');
+    var btn = item.querySelector('.lf-btn');
+    if(open){
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    } else {
+      item.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      panel.style.maxHeight = '0px';
+    }
+  }
+
+  items.forEach(function(item){
+    var btn = item.querySelector('.lf-btn');
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      items.forEach(function(o){ if(o !== item) setPanel(o, false); });
+      setPanel(item, !isOpen);
+    });
+  });
+
+  // open the first item on load
+  setPanel(items[0], true);
+
+  // keep open panel height correct on resize (font load / reflow)
+  window.addEventListener('resize', function(){
+    var open = acc.querySelector('.lf-item.open .lf-panel');
+    if(open) open.style.maxHeight = open.scrollHeight + 'px';
+  });
+  if(document.fonts && document.fonts.ready){
+    document.fonts.ready.then(function(){
+      var open = acc.querySelector('.lf-item.open .lf-panel');
+      if(open) open.style.maxHeight = open.scrollHeight + 'px';
+    });
+  }
+})();
+</script>
+</body>
+</html>
